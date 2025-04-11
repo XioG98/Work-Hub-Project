@@ -1,0 +1,82 @@
+*{
+  font-family: sans-serif;
+}
+
+label{
+  font-weight:bold;
+}
+
+table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: thin solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 4px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+th {
+  background-color: rgb(217, 228, 247);
+}
+
+input{
+  padding: 0.5em;
+}
+
+.acciones a {
+  text-decoration: none;
+}
+
+.modal {
+  display: none; /*Oculta el elemento y elimina su espacio en la página.*/
+  position: fixed; /*permanece en la misma posición en la pantalla, incluso al hacer scroll.*/
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000050;
+}
+
+.modal-content {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 40%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.detalles-producto{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detalles-producto input[type="submit"]{
+  cursor: pointer;
+  width: 40%;
+  margin: auto;
+  background-color: rgb(175, 182, 194);
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.detalles-producto input[type="submit"]:hover{
+  opacity: 0.75;
+}
