@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="assets/lib/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/common.css">
-
 </head>
 
 <body>
@@ -71,11 +70,9 @@
         <header class="align-content-center">
             <nav class="navbar navbar-expand-md  navbar-dark " id="myNav">
                 <div class="container-fluid pe-0 ">
-                    <a class="navbar-brand " href="/index.html"> <img id="imgHeader"
-                            src="assets/img/logo/logotipo WK.svg" alt="logotipo Work Hub"></a>
+                    <a class="navbar-brand " href="/admin.html"> <img id="imgHeader" src="assets/img/logo/logotipo WK.svg" alt="logotipo Work Hub"></a>
                     <div class="dropdown">
-                        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <strong class="me-2">Xiomara Garcia</strong>
                             <img src="https://github.com/XioG98.png" alt="" width="32" height="32"
                                 class="rounded-circle me-2">
@@ -95,28 +92,26 @@
         <main>
             <aside class="side-menu d-flex flex-column">
                 <ul class="nav flex-column mt-5">
-                    <li class="nav-item active">
-                        <button class="btn menu-option active">
+                    <li class="nav-item">
+                        <a href="/admin.html" class="btn menu-option" >
                             <svg class="me-2" width="18" height="18">
                                 <use xlink:href="#icon-main" />
                             </svg>
                             <span>Panel Principal</span>
-                        </button>
+                        </a>
 
                     </li>
                     <li class="nav-item">
-                        <button href="/admin.html" class="btn btn-toggle menu-option" data-bs-toggle="collapse"
-                            data-bs-target="#usuarios-collapse" aria-expanded="false">
+                        <button class="btn btn-toggle menu-option" data-bs-toggle="collapse" data-bs-target="#usuarios-collapse" aria-expanded="true">
                             <svg class="me-2" width="18" height="18">
                                 <use xlink:href="#icon-user" />
                             </svg>
                             <span>Usuarios</span>
                         </button>
-                        <div class="collapse" id="usuarios-collapse">
+                        <div class="collapse" id="usuarios-collapse" style="">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <li class="btn menu-option"><a href="/usuarios.html">Lista de Usuarios</a></li>
-                                <li class="btn menu-option"><a href="/registro-usuario.html">Registrar Usuario</a>
-                                </li>
+                                <li class="btn menu-option"><a href="/registro-usuario.html">Registrar Usuario</a></li>
                             </ul>
                         </div>
                     </li>
@@ -137,7 +132,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn menu-option" href="/resportes.html">
+                        <a class="btn menu-option active" href="/reportes.html">
                             <svg class="me-2" width="18" height="18">
                                 <use xlink:href="#icon-reportes" />
                             </svg>
@@ -145,51 +140,13 @@
                         </a>
                     </li>
                 </ul>
+                </ul>
             </aside>
 
             <section class="main-content ldg-busqueda">
-                <h1 class="mb-4">Panel Principal</h1>
-                <div class="row">
-                    <div class="col-md-4">
-                        <a href="/usuarios.html" class="text-decoration-none">
-                            <div class="card text-black bg-light-blue py-3 my-2">
-                                <div class="card-body">
-                                    <svg class="mb-3" width="29" height="18" fill="currentColor">
-                                        <use xlink:href="#icon-users" />
-                                    </svg>
-                                    <p class="card-text mb-3">30.272</p>
-                                    <h5 class="card-title">Total de usuarios</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card text-black bg-light-peach py-3 my-2">
-                            <div class="card-body">
-                                <svg class="mb-3" width="29" height="18" fill="currentColor">
-                                    <use xlink:href="#icon-ofertas" />
-                                </svg>
-                                <p class="card-text mb-3">3.698</p>
-                                <h5 class="card-title">Publicaciones activas</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="/resportes.html" class="text-decoration-none">
-                            <div class="card text-black bg-light-pink py-3 my-2">
-                                <div class="card-body">
-                                    <svg class="mb-3" width="29" height="18" fill="currentColor">
-                                        <use xlink:href="#icon-reportes" />
-                                    </svg>
-                                    <p class="card-text mb-3">9</p>
-                                    <h5 class="card-title">Reportes pendientes</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
                 <div class="table-responsive mt-4">
-                    <h2>Reportes recientes</h2>
+                    <h2>Reportes</h2>
+                    <hr>
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -207,7 +164,7 @@
                                 <td>John Doe</td>
                                 <td>Limpieza de oficinas</td>
                                 <td>Activo</td>
-                                <td>2023-10-01</td>
+                                <td>2023-09-25</td>
                                 <td class="text-end">
                                     <svg class="" width="24" height="24" fill="currentColor">
                                         <use xlink:href="#icon-editar" />
@@ -219,7 +176,7 @@
                                 <td>Jane Smith</td>
                                 <td>Jardinería residencial</td>
                                 <td>En progreso</td>
-                                <td>2023-10-01</td>
+                                <td>2023-09-26</td>
                                 <td class="text-end">
                                     <svg class="" width="24" height="24" fill="currentColor">
                                         <use xlink:href="#icon-editar" />
@@ -231,7 +188,7 @@
                                 <td>Mike Johnson</td>
                                 <td>Mantenimiento de áreas verdes</td>
                                 <td>Resuelto</td>
-                                <td>2023-10-01</td>
+                                <td>2023-09-27</td>
                                 <td class="text-end">
                                     <svg class="" width="24" height="24" fill="currentColor">
                                         <use xlink:href="#icon-editar" />
@@ -243,7 +200,7 @@
                                 <td>Emily Davis</td>
                                 <td>Reparación de techos</td>
                                 <td>Activo</td>
-                                <td>2023-10-02</td>
+                                <td>2023-09-28</td>
                                 <td class="text-end">
                                     <svg class="" width="24" height="24" fill="currentColor">
                                         <use xlink:href="#icon-editar" />
@@ -255,7 +212,7 @@
                                 <td>Chris Brown</td>
                                 <td>Instalación de sistemas eléctricos</td>
                                 <td>En progreso</td>
-                                <td>2023-10-02</td>
+                                <td>2023-09-29</td>
                                 <td class="text-end">
                                     <svg class="" width="24" height="24" fill="currentColor">
                                         <use xlink:href="#icon-editar" />
@@ -267,7 +224,7 @@
                                 <td>Sarah Wilson</td>
                                 <td>Pintura de interiores</td>
                                 <td>Resuelto</td>
-                                <td>2023-10-02</td>
+                                <td>2023-09-30</td>
                                 <td class="text-end">
                                     <svg class="" width="24" height="24" fill="currentColor">
                                         <use xlink:href="#icon-editar" />
@@ -279,7 +236,7 @@
                                 <td>David Lee</td>
                                 <td>Reparación de plomería</td>
                                 <td>Activo</td>
-                                <td>2023-10-03</td>
+                                <td>2023-10-01</td>
                                 <td class="text-end">
                                     <svg class="" width="24" height="24" fill="currentColor">
                                         <use xlink:href="#icon-editar" />
@@ -291,7 +248,7 @@
                                 <td>Laura Martinez</td>
                                 <td>Diseño de jardines</td>
                                 <td>En progreso</td>
-                                <td>2023-10-03</td>
+                                <td>2023-10-02</td>
                                 <td class="text-end">
                                     <svg class="" width="24" height="24" fill="currentColor">
                                         <use xlink:href="#icon-editar" />
@@ -310,15 +267,155 @@
                                     </svg>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Anna White</td>
+                                <td>Decoración de interiores</td>
+                                <td>Resuelto</td>
+                                <td>2023-10-04</td>
+                                <td class="text-end">
+                                    <svg class="" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="#icon-editar" />
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Tom Harris</td>
+                                <td>Reparación de electrodomésticos</td>
+                                <td>Resuelto</td>
+                                <td>2023-10-05</td>
+                                <td class="text-end">
+                                    <svg class="" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="#icon-editar" />
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Olivia Brown</td>
+                                <td>Instalación de paneles solares</td>
+                                <td>Resuelto</td>
+                                <td>2023-10-06</td>
+                                <td class="text-end">
+                                    <svg class="" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="#icon-editar" />
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Lucas Green</td>
+                                <td>Reparación de cercas</td>
+                                <td>Resuelto</td>
+                                <td>2023-10-07</td>
+                                <td class="text-end">
+                                    <svg class="" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="#icon-editar" />
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Emma Clark</td>
+                                <td>Diseño de interiores</td>
+                                <td>Resuelto</td>
+                                <td>2023-10-08</td>
+                                <td class="text-end">
+                                    <svg class="" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="#icon-editar" />
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>Daniel Scott</td>
+                                <td>Reparación de techos</td>
+                                <td>Resuelto</td>
+                                <td>2023-10-09</td>
+                                <td class="text-end">
+                                    <svg class="" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="#icon-editar" />
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>Sophia Adams</td>
+                                <td>Instalación de aire acondicionado</td>
+                                <td>Resuelto</td>
+                                <td>2023-10-10</td>
+                                <td class="text-end">
+                                    <svg class="" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="#icon-editar" />
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>Matthew Evans</td>
+                                <td>Reparación de ventanas</td>
+                                <td>Resuelto</td>
+                                <td>2023-10-11</td>
+                                <td class="text-end">
+                                    <svg class="" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="#icon-editar" />
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>Isabella Turner</td>
+                                <td>Reparación de puertas</td>
+                                <td>Resuelto</td>
+                                <td>2023-10-12</td>
+                                <td class="text-end">
+                                    <svg class="" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="#icon-editar" />
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>Andrew Walker</td>
+                                <td>Instalación de sistemas de seguridad</td>
+                                <td>Resuelto</td>
+                                <td>2023-10-13</td>
+                                <td class="text-end">
+                                    <svg class="" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="#icon-editar" />
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>Grace Hall</td>
+                                <td>Reparación de muebles</td>
+                                <td>Resuelto</td>
+                                <td>2023-10-14</td>
+                                <td class="text-end">
+                                    <svg class="" width="24" height="24" fill="currentColor">
+                                        <use xlink:href="#icon-editar" />
+                                    </svg>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center mt-4">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item">
+                                <a class="page-link disabled" href="#">Siguiente</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+            </section>
+        </main>
     </div>
-    </section>
-    </main>
-    </div>
-
     <script src="assets/lib/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
