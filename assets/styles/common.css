@@ -1,0 +1,119 @@
+.bg-light-pink {
+    background-color: #FBACAC99;
+}
+
+.bg-light-peach {
+    background-color: #FBE3CE99;
+}
+
+.bg-light-blue {
+    background-color: #ABE5F299;
+}
+
+body,
+html {
+    margin: 0;
+    height: 100vh;
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.side-menu {
+    box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.05);
+    width: 280px;
+}
+
+.side-menu li {
+    padding: 8px 10px;
+    align-items: center;
+    gap: 23px 0px;
+    align-self: stretch;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.side-menu .nav-link {
+    color: inherit;
+}
+
+.side-menu ul li a {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-option {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-option:hover {
+    color: var(--blankest);
+    fill: var(--blankest);
+    background: var(--Dark, #0c0e1e);
+}
+
+.menu-option.active {
+    color: var(--blankest);
+    fill: var(--blankest);
+    background: var(--Dark, #0c0e1e);
+}
+
+a {
+    color: inherit;
+}
+
+.btn-toggle::after {
+    position: absolute;
+    right: 12px;
+    line-height: 0;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    transition: transform .35s ease;
+    transform-origin: .5em 50%;
+}
+
+.btn-toggle[aria-expanded="true"]::after {
+    transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+    display: inline-flex;
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 25px;
+    margin-left: 4px;
+}
+
+.form-container {
+    max-width: 600px; 
+    width: 100%; 
+    background-color: #f8f9fa; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
