@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temporary jobs page">
+  <title>Work Hub</title>
+  <link rel="icon" type="img/png" href="assets/img/logo/favIcon.svg">
+  <link rel="stylesheet" type="text/css" href="assets/lib/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+</head>
+
+
+<body>
+
+  <header class="align-content-center">
+
+    <nav class="navbar navbar-expand-md  navbar-dark " id="myNav">
+      <div class="container-fluid pe-0 ">
+        <a class="navbar-brand " href="/index.html"> <img id="imgHeader" src="assets/img/logo/logotipo WK.svg"
+            alt="logotipo Work Hub"></a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end  fs" id="collapsibleNavbar">
+          <ul class="navbar-nav ">
+            <li class="nav-item">
+              <a class="nav-link my-Link" href="index.html" target="_top">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link my-Link" href="index.html#ldg-how-work">Cómo funciona</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link my-Link" href="index.html#ldg-busqueda">Buscar Oferta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link my-Link" href="contacto.html">Contacto</a>
+            </li>
+
+          </ul>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end ">
+            <button id="login" class="btn-stroke btn me-md-2 " type="button" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">Iniciar Sesión</button>
+            <button id="signUp" class="btn btn-cta " type="button">Registrarse</button>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+
+  </header>
+
+
+  <main>
+   
+    <div class="container-form-contact d-flex flex-column  align-items-center  ldg-busqueda min-vh-100 position-relative">
+      
+    <form class="row g-3 col-10 col-md-5 form-contact p-4 rounded-4 border border-1 border-dark-subtle ">
+      
+      <div class="form-header d-flex gap-4">
+        <img src="assets/img/logo/logoWK.svg" class="img-fluid col-1" alt="">
+        <h1>Contacta con nosotros</h1>
+      </div>
+      
+      <div class="col-12">
+        <label for="inputAddress" class="form-label fs">Nombre completo</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="">
+      </div>
+      <div class="col-md-12">
+        <label for="inputEmail4" class="form-label fs">Correo</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label fs">Oficio</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-6">
+        <label for="inputState" class="form-label fs">Municipio</label>
+        <select id="inputState" class="form-select">
+          <option selected>...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label for="inputMessage" class="form-label fs">Su mensaje</label>
+        <textarea class="form-control " id="inputMessage" placeholder="" maxlength="500"> </textarea>
+      </div>
+
+
+    
+      <div class="col-12 d-flex flex-column justify-content-center align-items-center py-3">
+        <button type="submit" class="btn btn-stroke w-25">Enviar</button>
+      </div>
+    </form>
+
+    <img class="clouds img-fluid bottom-0 position-absolute mt-6" src="assets/img/backgrounds/LowCloud.svg" alt="">
+  </div>
+
+    <!-- FOOTER-->
+
+    <footer>
+      <div class="myFooter d-flex justify-content-center flex-column flex-md-row ">
+        <div class="logo-Redes d-flex flex-column align-items-center justify-content-center">
+          <img id="imgFooter" src="assets/img/logo/Logotipo WorkHub.svg" alt="logoWK">
+
+          <div class="redesSociales">
+            <a href=""><img class="redes" src="assets/img/icons/instagram.svg" alt=""></a>
+            <a href=""><img class="redes" src="assets/img/icons/x.svg" alt=""></a>
+            <a href=""><img class="redes" src="assets/img/icons/facebook.svg" alt=""></a>
+          </div>
+        </div>
+
+        <div id="informacionFooter" class="d-flex align-items-start justify-content-center ">
+          <ul class="list-unstyled d-flex flex-column justify-content-center">
+            <h2>Nosotros</h2>
+            <li><a class="fs" href="">Sobre nosotros</a></li>
+            <li><a class="fs" href="">Política de privacidad</a></li>
+            <li><a class="fs" href="">Términos y condiciones</a></li>
+          </ul>
+
+          <ul class="list-unstyled d-flex flex-column  justify-content-center">
+            <h2>Ayuda</h2>
+            <li><a class="fs" href="">Preguntas frecuentes</a></li>
+            <li><a class="fs" href="">Soporte</a></li>
+            <li><a class="fs" href="">Comunidad</a></li>
+            <li><a class="fs" href="">¿Cómo publicar una oferta?</a></li>
+            <li><a class="fs" href="">¿Cómo aplicar a una oferta?</a></li>
+            <li><a class="fs" href="">Contactanos</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr class=" border-top border-4 border-secondary rounded-4">
+
+    </footer>
+
+
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="functions.js"></script>
+
+</body>
+
+</html>
