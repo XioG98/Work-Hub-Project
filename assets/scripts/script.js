@@ -1,60 +1,60 @@
 
 
-function openAdmin(){
+function openAdmin() {
   const email = document.getElementById("email");
   const password = document.getElementById("password");
-  if(email.value=='admin@gmail.com' && password.value=='123'){
-      window.location='admin.html'
+  if (email.value == 'admin@gmail.com' && password.value == '123') {
+    window.location = 'admin.html'
       ;
   }
   console.log("no")
-} 
+}
 
-  /* Carrusel jobs*/
-  document.addEventListener( 'DOMContentLoaded', function () {
-    new Splide( '#thumbnail-carousel', {
-      type   : 'loop',
+/* Carrusel jobs*/
+document.addEventListener('DOMContentLoaded', function () {
+  new Splide('#thumbnail-carousel', {
+    type: 'loop',
 
-      fixedWidth : 250,
-      fixedHeight: 250,
-      arrows: false,
-      gap        : 50,
-      rewind     : true,
-      pagination : false,
-      focus      : 'start',
-      breakpoints: {
+    fixedWidth: 250,
+    fixedHeight: 250,
+    arrows: false,
+    gap: 50,
+    rewind: true,
+    pagination: false,
+    focus: 'start',
+    breakpoints: {
 
-        992: {
-          perPage: 4,
+      992: {
+        perPage: 4,
 
-        },
-        768: {
-          fixedWidth : 200,
-          fixedHeight: 200,
-
-        },
       },
-    } ).mount();  
-    
-    var splide = new Splide( '#ldg-pro', {
-    type   : 'loop',
+      768: {
+        fixedWidth: 200,
+        fixedHeight: 200,
+
+      },
+    },
+  }).mount();
+
+  var splide = new Splide('#ldg-pro', {
+    type: 'loop',
     perPage: 4,
-   perMove: 2,
-   breakpoints: {
-    992: {
-      perPage: 2,
-      perMove: 1,
+    perMove: 2,
+    breakpoints: {
+      992: {
+        perPage: 2,
+        perMove: 1,
+      },
+      768: {
+        perPage: 1,
+        perMove: 1,
+      },
     },
-    768: {
-      perPage: 1,
-      perMove: 1,
-    },
-  },
-  
-  } );
-  
+
+  });
+
   splide.mount();
-  } );
+});
 
 
 /* Icono mostrar/ocultar login*/

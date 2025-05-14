@@ -1,0 +1,64 @@
+<div class="modal fade" id="modalLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="modalLogin" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content rounded-5 pb-4 text-light ">
+      <button type="button" class="btn-close ms-auto mt-4 me-4" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-body w-75 d-flex flex-column  gap-4 justify-content-center mt-2 mx-auto ">
+        <h3 class="text-center">Iniciar sesión</h3>
+        <div class="input-group rounded-0">
+          <input type="email" class="login-input form-control  text-light border-0 border-bottom rounded-0" id="email"
+            required placeholder=" ">
+          <label for="email">Email</label>
+          <span class="input-group-text  border-0 border-bottom rounded-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
+              <path
+                d="M2.2 18C1.595 18 1.07708 17.7797 0.64625 17.3391C0.215417 16.8984 0 16.3687 0 15.75V2.25C0 1.63125 0.215417 1.10156 0.64625 0.660937C1.07708 0.220312 1.595 0 2.2 0H19.8C20.405 0 20.9229 0.220312 21.3537 0.660937C21.7846 1.10156 22 1.63125 22 2.25V15.75C22 16.3687 21.7846 16.8984 21.3537 17.3391C20.9229 17.7797 20.405 18 19.8 18H2.2ZM11 10.125L2.2 4.5V15.75H19.8V4.5L11 10.125ZM11 7.875L19.8 2.25H2.2L11 7.875ZM2.2 4.5V2.25V15.75V4.5Z"
+                fill="#B6B8C8" />
+            </svg></span>
+        </div>
+        <div class="input-group ">
+          <input type="password" class="login-input form-control  text-light border-bottom rounded-0 border-0"
+            id="password" minlength="3" required placeholder=" ">
+          <label for="password">Contraseña</label>
+          <span class="input-group-text   border-bottom rounded-0 border-0">
+            <svg class=" eyePassword toggle-icon" onclick="togglePassword()" xmlns="http://www.w3.org/2000/svg"
+              width="31" height="18" viewBox="0 0 31 18" fill="none">
+              <path d="M2 9.11384C13 19 19.5 19 29.5 9.11384C18.8789 -1.37506 13.259 -2.02927 2 9.11384Z" stroke="white"
+                stroke-width="1.5" />
+              <path
+                d="M16 13.0284C18.4853 13.0284 20.5 11.0137 20.5 8.52844C20.5 6.04316 18.4853 4.02844 16 4.02844C13.5147 4.02844 11.5 6.04316 11.5 8.52844C11.5 11.0137 13.5147 13.0284 16 13.0284Z"
+                fill="white" stroke="white" />
+            </svg>
+          </span>
+        </div>
+        <div class="recordarContraseña d-inline-flex gap-2 align-content-center align-items-center">
+          <p class="m-0 fs-6">Recordar contraseña</p>
+          <div class="checkbox-wrapper-18">
+            <div class="round">
+              <input type="checkbox" id="checkbox-18">
+              <label for="checkbox-18"></label>
+            </div>
+          </div>
+        </div>
+        <!-- Boton Iniciar Sesión-->
+        <button id="btn-ingresar" class="btn pcb" type="button" onclick="openAdmin()">Iniciar Sesion</button>
+
+        <div class="divider d-flex justify-content-center text-center align-items-center">
+          <hr class="border-top border-2 border-white col-4 justify-content-start">
+          <hr>
+          <span class="mx-4">O CON</span>
+          <hr class="border-top border-2 border-white col-4 justify-content-end">
+          <hr>
+        </div>
+        <button class="btn-stroke-2"> <img src="assets/img/icons/logo-de-google.svg" alt=""> Continuar con
+          Google</button>
+
+        <div class="d-flex">
+          <div class=" col-5"><a href="#" data-bs-toggle="modal" data-bs-target="#modalSignup">Crear cuenta</a>
+          </div>
+          <div class=" col-7"><a class="text-white" href="#">¿Olvidaste tu contraseña?</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

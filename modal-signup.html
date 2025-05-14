@@ -1,0 +1,75 @@
+<div class="signUp modal fade" id="modalSignup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="modalSignup" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content rounded-5 pb-4 ">
+      <button type="button" class="btn-close ms-auto mt-4 me-4" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-body w-75 d-flex flex-column  gap-4 justify-content-center mt-2 mx-auto ">
+        <h3 class="text-center">Registrarse</h3>
+        <div class="input-group rounded-0">
+          <input type="text" class="signup-input form-control border-0 border-bottom rounded-0" id="userName" required
+            placeholder=" ">
+          <label for="userName">Nombre de usuario</label>
+          <span class="input-group-text  border-0 border-bottom rounded-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+              <path
+                d="M8.85522 8.58545C7.75522 8.58545 6.81356 8.19378 6.03022 7.41045C5.24689 6.62712 4.85522 5.68545 4.85522 4.58545C4.85522 3.48545 5.24689 2.54378 6.03022 1.76045C6.81356 0.977116 7.75522 0.585449 8.85522 0.585449C9.95522 0.585449 10.8969 0.977116 11.6802 1.76045C12.4636 2.54378 12.8552 3.48545 12.8552 4.58545C12.8552 5.68545 12.4636 6.62712 11.6802 7.41045C10.8969 8.19378 9.95522 8.58545 8.85522 8.58545ZM0.855225 16.5854V13.7854C0.855225 13.2188 1.00106 12.6979 1.29272 12.2229C1.58439 11.7479 1.97189 11.3854 2.45522 11.1354C3.48856 10.6188 4.53856 10.2313 5.60522 9.97295C6.67189 9.71462 7.75522 9.58545 8.85522 9.58545C9.95522 9.58545 11.0386 9.71462 12.1052 9.97295C13.1719 10.2313 14.2219 10.6188 15.2552 11.1354C15.7386 11.3854 16.1261 11.7479 16.4177 12.2229C16.7094 12.6979 16.8552 13.2188 16.8552 13.7854V16.5854H0.855225ZM2.85522 14.5854H14.8552V13.7854C14.8552 13.6021 14.8094 13.4354 14.7177 13.2854C14.6261 13.1354 14.5052 13.0188 14.3552 12.9354C13.4552 12.4854 12.5469 12.1479 11.6302 11.9229C10.7136 11.6979 9.78856 11.5854 8.85522 11.5854C7.92189 11.5854 6.99689 11.6979 6.08022 11.9229C5.16356 12.1479 4.25522 12.4854 3.35522 12.9354C3.20522 13.0188 3.08439 13.1354 2.99272 13.2854C2.90106 13.4354 2.85522 13.6021 2.85522 13.7854V14.5854ZM8.85522 6.58545C9.40522 6.58545 9.87606 6.38962 10.2677 5.99795C10.6594 5.60628 10.8552 5.13545 10.8552 4.58545C10.8552 4.03545 10.6594 3.56462 10.2677 3.17295C9.87606 2.78128 9.40522 2.58545 8.85522 2.58545C8.30522 2.58545 7.83439 2.78128 7.44272 3.17295C7.05106 3.56462 6.85522 4.03545 6.85522 4.58545C6.85522 5.13545 7.05106 5.60628 7.44272 5.99795C7.83439 6.38962 8.30522 6.58545 8.85522 6.58545Z"
+                fill="#232B59" />
+            </svg>
+          </span>
+        </div>
+        <div class="input-group rounded-0">
+          <input type="email" class="signUp-input form-control border-0 border-bottom rounded-0" id="emailR" required
+            placeholder=" ">
+          <label for="emailR">Email</label>
+          <span class="input-group-text  border-0 border-bottom rounded-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17" fill="none">
+              <path
+                d="M2.85522 16.5854C2.30522 16.5854 1.83439 16.3896 1.44272 15.9979C1.05106 15.6063 0.855225 15.1354 0.855225 14.5854V2.58545C0.855225 2.03545 1.05106 1.56462 1.44272 1.17295C1.83439 0.781283 2.30522 0.585449 2.85522 0.585449H18.8552C19.4052 0.585449 19.8761 0.781283 20.2677 1.17295C20.6594 1.56462 20.8552 2.03545 20.8552 2.58545V14.5854C20.8552 15.1354 20.6594 15.6063 20.2677 15.9979C19.8761 16.3896 19.4052 16.5854 18.8552 16.5854H2.85522ZM10.8552 9.58545L2.85522 4.58545V14.5854H18.8552V4.58545L10.8552 9.58545ZM10.8552 7.58545L18.8552 2.58545H2.85522L10.8552 7.58545ZM2.85522 4.58545V2.58545V14.5854V4.58545Z"
+                fill="#232B59" />
+            </svg>
+          </span>
+        </div>
+        <div class="input-group ">
+          <input type="password" class="signUp-input form-control   border-bottom rounded-0 border-0" id="loginPassword"
+            minlength="3" required placeholder=" ">
+          <label for="loginPassword">Contraseña</label>
+          <span class="input-group-text   border-bottom rounded-0 border-0">
+            <svg class=" eyePassword toggle-icon" onclick="signupTogglePassword()" xmlns="http://www.w3.org/2000/svg"
+              width="31" height="18" viewBox="0 0 31 18" fill="none">
+              <path d="M2 9.11384C13 19 19.5 19 29.5 9.11384C18.8789 -1.37506 13.259 -2.02927 2 9.11384Z"
+                stroke="#232b59" stroke-width="1.5" />
+              <path
+                d="M16 13.0284C18.4853 13.0284 20.5 11.0137 20.5 8.52844C20.5 6.04316 18.4853 4.02844 16 4.02844C13.5147 4.02844 11.5 6.04316 11.5 8.52844C11.5 11.0137 13.5147 13.0284 16 13.0284Z"
+                fill="#232b59" stroke="#232b59" />
+            </svg>
+          </span>
+        </div>
+        <div class=" d-inline-flex gap-2 align-content-center align-items-center">
+          <div class="checkbox-wrapper-18">
+            <div class="round">
+              <input type="checkbox" id="checkbox-singup">
+              <label for="checkbox-singup"></label>
+            </div>
+          </div>
+          <p class="m-0 fs-6">Aceptar térmidos y condiciones de uso</p>
+        </div>
+        <button id="btn-registrar" class="btn btn-dark " type="button" onclick="">Registrarse</button>
+
+        <div class="divider d-flex justify-content-center text-center align-items-center">
+          <hr class="border-top border-2 border-white col-4 justify-content-start">
+          <hr>
+          <span class="mx-4">O CON</span>
+          <hr class="border-top border-2 border-white col-4 justify-content-end">
+          <hr>
+        </div>
+        <button class="btn-stroke"> <img src="assets/img/icons/logo-de-google.svg" alt=""> Continuar con
+          Google</button>
+        <div class="d-flex">
+          <div class=" col-9"><a href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">¿Ya tienes cuenta?</a>
+          </div>
+          <div class=" col-3"><a href="#">Ir al inicio</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
