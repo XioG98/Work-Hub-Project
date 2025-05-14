@@ -26,50 +26,50 @@
 /* Variables de color */
 :root {
   --blankest: #f4f8fb;
-  --heavenBlank: #eaf0f6;
-  --angelblank: #e4edf4;
-  --lightBlank: #eff4f9;
-  --blankgrey: #dfe9f2;
+  --heaven-blank: #eaf0f6;
+  --angel-blank: #e4edf4;
+  --light-blank: #eff4f9;
+  --blank-grey: #dfe9f2;
   --light-grey: #bac2ca;
   --grey: #707579;
-  --darkgrey: #4a4e51;
+  --dark-grey: #4a4e51;
   --dark: #0c0e1e;
-  --softorange: #f2ab6d;
+  --soft-orange: #f2ab6d;
   --orange: #e87f20;
-  --bluestgrey: #6c7290;
-  --lightskyblue: #abe5f2;
+  --bluest-grey: #6c7290;
+  --light-sky-blue: #abe5f2;
   --blue: #04b2d9;
-  --miniBlue: #58cce6;
-  --neggingBlue: #0394b5;
-  --darkyblue: #037791;
-  --darkblue: #232b59;
-  --darkestblue: #12162d;
+  --mini-blue: #58cce6;
+  --negging-blue: #0394b5;
+  --darky-blue: #037791;
+  --dark-blue: #232b59;
+  --darkest-blue: #12162d;
 }
 
 /* Color de backgrounds */
 .bk-blankest { background: var(--blankest) }
-.bk-heavenBlank { background: var(--heavenBlank) }
-.bk-angelblank { background: var(--angelblank) }
-.bk-lightBlank { background: var(--lightBlank) }
-.bk-blankgrey { background: var(--blankgrey) }
-.bk-lightGrey { background: var(--light-grey) }
+.bk-heaven-blank { background: var(--heaven-blank) }
+.bk-angel-blank { background: var(--angel-blank) }
+.bk-light-lank { background: var(--light-blank) }
+.bk-blank-grey { background: var(--blank-grey) }
+.bk-light-grey { background: var(--light-grey) }
 .bk-grey { background: var(--grey) }
-.bk-darkgrey { background: var(--darkgrey) }
+.bk-dark-grey { background: var(--dark-grey) }
 .bk-dark { background: var(--dark) }
-.bk-softorange { background: var(--softorange) }
+.bk-soft-orange { background: var(--soft-orange) }
 .bk-orange { background: var(--orange) }
-.bk-bluestgrey { background: var(--bluestgrey) }
-.bk-lightskyblue { background: var(--lightskyblue) }
+.bk-bluest-grey { background: var(--bluest-grey) }
+.bk-light-sky-blue { background: var(--light-sky-blue) }
 .bk-blue { background: var(--blue) }
-.bk-miniBlue { background: var(--miniBlue) }
-.bk-neggingBlue { background: var(--neggingBlue) }
-.bk-darkyblue { background: var(--darkyblue) }
-.bk-darkblue { background: var(--darkblue) }
-.bk-darkestblue { background: var(--darkestblue) }
+.bk-mini-blue { background: var(--mini-bluee) }
+.bk-negging-blue { background: var(--negging-blue) }
+.bk-darky-blue { background: var(--darky-blue) }
+.bk-dark-blue { background: var(--dark-blue) }
+.bk-darkest-blue { background: var(--darkest-blue) }
 .bg-light-pink { background-color: #fbacac99 }
 .bg-light-peach { background-color: #fbe3ce99 }
 .bg-light-blue { background-color: #abe5f299 }
-.bk-gr-blueorange {
+.bk-gr-blue-orange {
   background: linear-gradient(
     100deg,
     #013b48 -0.5%,
@@ -79,26 +79,25 @@
 }
 
 /* Clases de color */
-.cl-blankest { color: var(--blankest) }
-.cl-heavenBlank { color: var(--heavenBlank) }
-.cl-angelblank { color: var(--angelblank);}
-.cl-lightBlank { color: var(--lightBlank) }
-.cl-blankgrey { color: var(--blankgrey) }
-.cl-lightGrey { color: var(--light-grey) }
-.cl-grey { color: var(--grey) }
-.cl-darkgrey { color: var(--darkgrey) }
-.cl-dark { color: var(--dark) }
-.cl-softorange { color: var(--softorange) }
-.cl-orange { color: var(--orange) }
-.cl-bluestgrey { color: var(--bluestgrey) }
-.cl-lightskyblue { color: var(--lightskyblue) }
-.cl-blue { color: var(--blue) }
-.cl-miniBlue { color: var(--miniBlue) }
-.cl-neggingBlue { color: var(--neggingBlue) }
-.cl-darkyblue { color: var(--darkyblue) }
-.cl-darkblue { color: var(--darkblue) }
-.cl-darkestblue { color: var(--darkestblue) }
-
+.cl-blankest { background: var(--blankest) }
+.cl-heaven-blank { background: var(--heaven-blank) }
+.cl-angel-blank { background: var(--angel-blank) }
+.cl-light-lank { background: var(--light-blank) }
+.cl-blank-grey { background: var(--blank-grey) }
+.cl-light-grey { background: var(--light-grey) }
+.cl-grey { background: var(--grey) }
+.cl-dark-grey { background: var(--dark-grey) }
+.cl-dark { background: var(--dark) }
+.cl-soft-orange { background: var(--soft-orange) }
+.cl-orange { background: var(--orange) }
+.cl-bluest-grey { background: var(--bluest-grey) }
+.cl-light-sky-blue { background: var(--light-sky-blue) }
+.cl-blue { background: var(--blue) }
+.cl-mini-blue { background: var(--mini-bluee) }
+.cl-negging-blue { background: var(--negging-blue) }
+.cl-darky-blue { background: var(--darky-blue) }
+.cl-dark-blue { background: var(--dark-blue) }
+.cl-darkest-blue { background: var(--darkest-blue) }
 /* Reiniciar estilos predeterminados */
 * {
   margin: 0;
