@@ -61,7 +61,7 @@
 .bk-bluest-grey { background: var(--bluest-grey) }
 .bk-light-sky-blue { background: var(--light-sky-blue) }
 .bk-blue { background: var(--blue) }
-.bk-mini-blue { background: var(--mini-bluee) }
+.bk-mini-blue { background: var(--mini-blue) }
 .bk-negging-blue { background: var(--negging-blue) }
 .bk-darky-blue { background: var(--darky-blue) }
 .bk-dark-blue { background: var(--dark-blue) }
@@ -154,31 +154,35 @@ p {
   font-style: normal;
   font-weight: 600;
   border-radius: 6px;
+
 }
 .btn-cta {
-  background: var(--softorange);
+  background: var(--soft-orange);
   box-shadow: 0.5px 0.5px 1px 0 rgba(255, 255, 255, 0.6) inset,
     1px 1px 3px 0 rgba(0, 0, 0, 0.25);
   color: var(--blankest);
+  transition: all ease-in 200ms;
 }
 .btn-cta:hover {
   background: var(--orange);
   color: var(--blankest);
 }
 .btn-cta-2 {
-  background: var(--lightskyblue);
+  background: var(--light-sky-blue);
   box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.25);
   color: var(--dark);
+  transition: all ease-in 200ms;
 }
 .btn-cta-2:hover {
-  background: var(--neggingBlue);
-  color: var(--blankgrey);
+  background: var(--negging-blue);
+  color: var(--blank-grey);
 }
 .btn-stroke {
   border: 1.5px solid var(--dark);
   background: var(--blankest);
   box-shadow: 0.5px 0.5px 1px 0 rgba(0, 0, 0, 0.1) inset,
     1px 1px 5px 0 rgba(0, 0, 0, 0.25);
+    transition: all ease-in 200ms;
 }
 .btn-stroke:hover {
   color: var(--blankest);
@@ -188,20 +192,22 @@ p {
   border: 1.5px solid var(--blankest);
   color: var(--blankest);
   background-color: transparent;
+  transition: all ease-in 200ms;
 }
 .btn-stroke-2:hover {
   color: var(--dark);
-  background: var(--lightBlank);
+  background: var(--light-blank);
 }
 .btn-dark {
   border-right: 0.8px solid var(--blankest);
   border-bottom: 0.8px solid var(--blankest);
-  background: var(--darkestblue);
+  background: var(--darkest-blue);
   box-shadow: 0.5px 0.5px 1px 0 rgba(0, 0, 0, 0.2) inset,
     2px 2px 5px 0 rgba(0, 0, 0, 0.25);
   color: var(--blankest);
+  transition: all ease-in 200ms;
 }
 .btn-dark:hover {
   color: var(--light-grey);
-  background: var(--darkblue);
+  background: var(--dark-blue);
 }
