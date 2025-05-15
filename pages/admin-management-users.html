@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/lib/css/bootstrap.min.css">
+    <link rel="icon" type="img/png" href="../assets/img/logo/favIcon.svg">
+    <link rel="stylesheet" href="../assets/styles/admin-management-users.css">
+    <link rel="stylesheet" href="../assets/styles/common.css">
+</head>
+
+<body class="bk-angelblank">
+    <div class="container mt-5">
+        <header class="mb-4 d-flex justify-content-between">
+            <h2 class="fw-bold">Gestión de Usuarios</h2>
+            <button class="btn btn-warning text-white" onclick="openRegisterModal()">Nuevo Usuario</button>
+        </header>
+        <section class="bg-white p-4 rounded shadow-sm">
+            <div class="mb-4">
+                <h4 class="fw-semibold">Usuarios Registrados</h4>
+                <p class="text-muted">Administra todos los usuarios registrados en la plataforma</p>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+                <div class="input-group w-50">
+                    <span class="input-group-text bg-white border-end-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11 6a5 5 0 1 1-1.001-9.999A5 5 0 0 1 11 6zM1 6a6 6 0 1 0 10.472 3.472l3.913 3.913a1 1 0 0 0 1.414-1.414l-3.913-3.913A6 6 0 0 0 1 6z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="form-control border-start-0" id="searchInput"
+                        placeholder="Buscar usuarios...">
+                </div>
+                <button class="btn btn-outline-secondary" onclick="filterUsers()">Filtrar</button>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th><input type="checkbox" id="selectAll" onclick="toggleAll(this)"></th>
+                            <th>ID</th>
+                            <th>Usuario</th>
+                            <th>Email</th>
+                            <th>Tipo</th>
+                            <th>Estado</th>
+                            <th>Fecha Registro</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userModalLabel">Registrar Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="userForm">
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="userName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="userEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userTipo" class="form-label">Tipo</label>
+                            <select class="form-select" id="userTipo">
+                                <option value="Empleado">Empleado</option>
+                                <option value="Empresa">Empresa</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userEstado" class="form-label">Estado</label>
+                            <select class="form-select" id="userEstado">
+                                <option value="Activo">Activo</option>
+                                <option value="Inactivo">Inactivo</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="saveUser()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de Confirmación para Eliminar -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar Eliminación</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro de que deseas eliminar este usuario? Esta acción no se puede deshacer.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/lib/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/scripts/admin-management-users.js"></script>
+</body>
+
+</html>
