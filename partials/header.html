@@ -23,10 +23,12 @@
             </li>
           </ul>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end ">
-            <button id="login" class="btn-stroke btn me-md-2 " type="button" data-bs-toggle="modal"
-              data-bs-target="#modalLogin">Iniciar Sesión</button>
-            <button id="signUp" class="btn btn-cta " type="button" data-bs-toggle="modal"
-              data-bs-target="#modalSignup">Registrarse</button>
+            
+            <button id="login" class="btn-stroke btn me-md-2 " 
+              onclick="document.getElementById('modalLogin').showModal()">Iniciar Sesión</button>
+
+            <button onclick="document.getElementById('modalSignUp').showModal()" id="signUp" class="btn btn-cta"
+              >Registrarse</button>
           </div>
         </div>
       </div>
