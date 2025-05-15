@@ -79,25 +79,25 @@
 }
 
 /* Clases de color */
-.cl-blankest { background: var(--blankest) }
-.cl-heaven-blank { background: var(--heaven-blank) }
-.cl-angel-blank { background: var(--angel-blank) }
-.cl-light-lank { background: var(--light-blank) }
-.cl-blank-grey { background: var(--blank-grey) }
-.cl-light-grey { background: var(--light-grey) }
-.cl-grey { background: var(--grey) }
-.cl-dark-grey { background: var(--dark-grey) }
-.cl-dark { background: var(--dark) }
-.cl-soft-orange { background: var(--soft-orange) }
-.cl-orange { background: var(--orange) }
-.cl-bluest-grey { background: var(--bluest-grey) }
-.cl-light-sky-blue { background: var(--light-sky-blue) }
-.cl-blue { background: var(--blue) }
-.cl-mini-blue { background: var(--mini-bluee) }
-.cl-negging-blue { background: var(--negging-blue) }
-.cl-darky-blue { background: var(--darky-blue) }
-.cl-dark-blue { background: var(--dark-blue) }
-.cl-darkest-blue { background: var(--darkest-blue) }
+.cl-blankest { color: var(--blankest) }
+.cl-heaven-blank { color: var(--heaven-blank) }
+.cl-angel-blank { color: var(--angel-blank) }
+.cl-light-lank { color: var(--light-blank) }
+.cl-blank-grey { color: var(--blank-grey) }
+.cl-light-grey { color: var(--light-grey) }
+.cl-grey { color: var(--grey) }
+.cl-dark-grey { color: var(--dark-grey) }
+.cl-dark { color: var(--dark) }
+.cl-soft-orange { color: var(--soft-orange) }
+.cl-orange { color: var(--orange) }
+.cl-bluest-grey { color: var(--bluest-grey) }
+.cl-light-sky-blue { color: var(--light-sky-blue) }
+.cl-blue { color: var(--blue) }
+.cl-mini-blue { color: var(--mini-bluee) }
+.cl-negging-blue { color: var(--negging-blue) }
+.cl-darky-blue { color: var(--darky-blue) }
+.cl-dark-blue { color: var(--dark-blue) }
+.cl-darkest-blue { color: var(--darkest-blue) }
 /* Reiniciar estilos predeterminados */
 * {
   margin: 0;
@@ -158,10 +158,9 @@ p {
 }
 .btn-cta {
   background: var(--soft-orange);
-  box-shadow: 0.5px 0.5px 1px 0 rgba(255, 255, 255, 0.6) inset,
-    1px 1px 3px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0.5px 0.5px 1px 0 rgba(255, 255, 255, 0.6) inset,    1px 1px 3px 0 rgba(0, 0, 0, 0.25);
   color: var(--blankest);
-  transition: all ease-in 200ms;
+  transition: all ease-in 200ms;
 }
 .btn-cta:hover {
   background: var(--orange);
@@ -171,7 +170,7 @@ p {
   background: var(--light-sky-blue);
   box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.25);
   color: var(--dark);
-  transition: all ease-in 200ms;
+  transition: all ease-in 200ms;
 }
 .btn-cta-2:hover {
   background: var(--negging-blue);
@@ -182,7 +181,7 @@ p {
   background: var(--blankest);
   box-shadow: 0.5px 0.5px 1px 0 rgba(0, 0, 0, 0.1) inset,
     1px 1px 5px 0 rgba(0, 0, 0, 0.25);
-    transition: all ease-in 200ms;
+    transition: all ease-in 200ms;
 }
 .btn-stroke:hover {
   color: var(--blankest);
@@ -192,7 +191,7 @@ p {
   border: 1.5px solid var(--blankest);
   color: var(--blankest);
   background-color: transparent;
-  transition: all ease-in 200ms;
+  transition: all ease-in 200ms;
 }
 .btn-stroke-2:hover {
   color: var(--dark);
