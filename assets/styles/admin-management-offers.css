@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Estilos generales optimizados */
 .table-responsive {
     overflow: visible;
 }
@@ -14,7 +14,6 @@
     left: auto;
     top: 100%;
     z-index: 9999;
-    transform: none;
     min-width: 10rem;
     margin-top: 0.125rem;
 }
@@ -76,15 +75,15 @@ body.modal-open {
     }
 }
 
-/* Estilos para las tarjetas de usuario en móvil */
-.user-card {
+/* Estilos para las tarjetas - Renombradas de user-card a offer-card */
+.offer-card {
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
     margin-bottom: 1rem;
     background-color: #fff;
 }
 
-.user-card-header {
+.offer-card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -93,22 +92,22 @@ body.modal-open {
     background-color: rgba(0,0,0,.03);
 }
 
-.user-card-body {
+.offer-card-body {
     padding: 1rem;
 }
 
-.user-card-footer {
+.offer-card-footer {
     display: flex;
     justify-content: space-between;
     padding: 0.75rem 1rem;
     border-top: 1px solid rgba(0,0,0,.125);
 }
 
-.user-card-item {
+.offer-card-item {
     margin-bottom: 0.5rem;
 }
 
-.user-card-label {
+.offer-card-label {
     font-weight: 600;
     margin-right: 0.5rem;
 }
@@ -139,10 +138,4 @@ body.modal-open {
 .status-cerrada {
     background-color: #6c757d;
     color: white;
-}
-
-/* Estilos para el tipo de usuario (texto normal) */
-.user-type {
-    font-size: 0.875rem;
-    color: #495057;
 }

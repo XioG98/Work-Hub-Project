@@ -1,10 +1,10 @@
-let users = [];
-let filteredUsers = [];
+let offers = [];
+let filteredOffers = [];
 let editIndex = null;
 let deleteIndex = null;
 let confirmDeleteModal = null;
 let isMobile = window.innerWidth < 768;
-const STORAGE_KEY = 'admin_users';
+const STORAGE_KEY = 'admin_offers';
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
@@ -14,17 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Configurar el botón de confirmación
     document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
         if (deleteIndex !== null) {
-            users.splice(deleteIndex, 1);
+            offers.splice(deleteIndex, 1);
             saveToLocalStorage();
-            filteredUsers = [...users];
+            filteredOffers = [...offers];
             updateView();
             confirmDeleteModal.hide();
-            createToast("Usuario eliminado correctamente", "success");
+            createToast("Oferta eliminada correctamente", "success");
         }
     });
     
-    // Configurar el botón de guardar usuario
-    document.getElementById('saveUserBtn').addEventListener('click', saveUser);
+    // Configurar el botón de guardar oferta
+    document.getElementById('saveOfferBtn').addEventListener('click', saveOffer);
     
     // Cargar datos desde localStorage
     loadFromLocalStorage();
@@ -52,19 +52,19 @@ function updateToastContainerPosition() {
 
 // Funciones para localStorage
 function saveToLocalStorage() {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(users));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(offers));
 }
 
 function loadFromLocalStorage() {
-    const storedUsers = localStorage.getItem(STORAGE_KEY);
-    if (storedUsers) {
-        users = JSON.parse(storedUsers);
-        filteredUsers = [...users];
+    const storedOffers = localStorage.getItem(STORAGE_KEY);
+    if (storedOffers) {
+        offers = JSON.parse(storedOffers);
+        filteredOffers = [...offers];
         updateView();
     } else {
         // Inicializar con array vacío
-        users = [];
-        filteredUsers = [];
+        offers = [];
+        filteredOffers = [];
         updateView();
     }
 }
@@ -79,66 +79,63 @@ function getTodayDate() {
 
 function openRegisterModal(index = null) {
     // Resetear el formulario y quitar clases de validación
-    const form = document.getElementById('userForm');
+    const form = document.getElementById('offerForm');
     form.reset();
     form.classList.remove('was-validated');
     
     // Quitar clases de validación de los campos
-    document.getElementById('userName').classList.remove('is-invalid');
-    document.getElementById('userEmail').classList.remove('is-invalid');
+    document.getElementById('offerTitle').classList.remove('is-invalid');
+    document.getElementById('offerEmployer').classList.remove('is-invalid');
+    document.getElementById('offerDescription').classList.remove('is-invalid');
     
     editIndex = index;
     if (index !== null) {
-        const u = users[index];
-        document.getElementById('userName').value = u.name || '';
-        document.getElementById('userEmail').value = u.email || '';
-        document.getElementById('userTipo').value = u.tipo;
-        document.getElementById('userEstado').value = u.estado;
-        document.getElementById('userModalLabel').innerText = 'Editar Usuario';
+        const offer = offers[index];
+        document.getElementById('offerTitle').value = offer.title || '';
+        document.getElementById('offerEmployer').value = offer.employer || '';
+        document.getElementById('offerCategory').value = offer.category;
+        document.getElementById('offerStatus').value = offer.status;
+        document.getElementById('offerDescription').value = offer.description || '';
+        document.getElementById('offerModalLabel').innerText = 'Editar Oferta';
     } else {
-        document.getElementById('userModalLabel').innerText = 'Registrar Usuario';
+        document.getElementById('offerModalLabel').innerText = 'Registrar Oferta';
     }
-    new bootstrap.Modal(document.getElementById('userModal')).show();
+    new bootstrap.Modal(document.getElementById('offerModal')).show();
 }
 
 function validateForm() {
-    const nameInput = document.getElementById('userName');
-    const emailInput = document.getElementById('userEmail');
+    const titleInput = document.getElementById('offerTitle');
+    const employerInput = document.getElementById('offerEmployer');
+    const descriptionInput = document.getElementById('offerDescription');
     
     let isValid = true;
     let errors = [];
     
-    // Validar nombre
-    if (!nameInput.value.trim()) {
-        nameInput.classList.add('is-invalid');
-        errors.push('El nombre no puede estar vacío');
+    // Validar título
+    if (!titleInput.value.trim()) {
+        titleInput.classList.add('is-invalid');
+        errors.push('El título no puede estar vacío');
         isValid = false;
     } else {
-        nameInput.classList.remove('is-invalid');
+        titleInput.classList.remove('is-invalid');
     }
     
-    // Validar email - formato
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailInput.value.trim()) {
-        emailInput.classList.add('is-invalid');
-        errors.push('El correo electrónico no puede estar vacío');
-        isValid = false;
-    } else if (!emailPattern.test(emailInput.value)) {
-        emailInput.classList.add('is-invalid');
-        errors.push('Por favor ingrese un correo electrónico válido');
+    // Validar empleador
+    if (!employerInput.value.trim()) {
+        employerInput.classList.add('is-invalid');
+        errors.push('El empleador no puede estar vacío');
         isValid = false;
     } else {
-        // Validar email - duplicado
-        const isDuplicate = editIndex === null && 
-            users.some(user => user.email && user.email.toLowerCase() === emailInput.value.toLowerCase());
-        
-        if (isDuplicate) {
-            emailInput.classList.add('is-invalid');
-            errors.push('Este correo electrónico ya está registrado');
-            isValid = false;
-        } else {
-            emailInput.classList.remove('is-invalid');
-        }
+        employerInput.classList.remove('is-invalid');
+    }
+    
+    // Validar descripción
+    if (!descriptionInput.value.trim()) {
+        descriptionInput.classList.add('is-invalid');
+        errors.push('La descripción no puede estar vacía');
+        isValid = false;
+    } else {
+        descriptionInput.classList.remove('is-invalid');
     }
     
     // En móvil, mostrar solo un toast con todos los errores
@@ -156,38 +153,56 @@ function validateForm() {
     return isValid;
 }
 
-function saveUser() {
+function saveOffer() {
     // Validar el formulario
     if (!validateForm()) {
         return;
     }
     
-    const name = document.getElementById('userName').value;
-    const email = document.getElementById('userEmail').value;
-    const tipo = document.getElementById('userTipo').value;
-    const estado = document.getElementById('userEstado').value;
+    const title = document.getElementById('offerTitle').value;
+    const employer = document.getElementById('offerEmployer').value;
+    const category = document.getElementById('offerCategory').value;
+    const status = document.getElementById('offerStatus').value;
+    const description = document.getElementById('offerDescription').value;
     const fecha = getTodayDate();
+    const applications = editIndex !== null ? offers[editIndex].applications || 0 : 0;
 
     if (editIndex !== null) {
-        users[editIndex] = { ...users[editIndex], name, email, tipo, estado };
-        createToast("Usuario actualizado correctamente", "success");
+        offers[editIndex] = { 
+            ...offers[editIndex], 
+            title, 
+            employer, 
+            category, 
+            status, 
+            description 
+        };
+        createToast("Oferta actualizada correctamente", "success");
     } else {
         // Generar un ID único basado en el máximo ID existente + 1
-        const maxId = users.length > 0 ? Math.max(...users.map(user => user.id)) : 0;
+        const maxId = offers.length > 0 ? Math.max(...offers.map(offer => offer.id)) : 0;
         const id = maxId + 1;
-        users.push({ id, name, email, tipo, estado, fecha });
-        createToast("Usuario creado correctamente", "success");
+        offers.push({ 
+            id, 
+            title, 
+            employer, 
+            category, 
+            status, 
+            description, 
+            fecha, 
+            applications 
+        });
+        createToast("Oferta creada correctamente", "success");
     }
     
     // Guardar en localStorage
     saveToLocalStorage();
     
     // Actualizar la vista
-    filteredUsers = [...users];
+    filteredOffers = [...offers];
     updateView();
     
     // Cerrar el modal
-    const modalInstance = bootstrap.Modal.getInstance(document.getElementById('userModal'));
+    const modalInstance = bootstrap.Modal.getInstance(document.getElementById('offerModal'));
     if (modalInstance) {
         modalInstance.hide();
     }
@@ -208,36 +223,37 @@ function updateView() {
 }
 
 function updateTableView() {
-    const tbody = document.getElementById('userTableBody');
+    const tbody = document.getElementById('offerTableBody');
     tbody.innerHTML = '';
     
-    if (filteredUsers.length === 0) {
+    if (filteredOffers.length === 0) {
         tbody.innerHTML = `
             <tr>
-                <td colspan="8" class="text-center py-4">No hay usuarios para mostrar</td>
+                <td colspan="9" class="text-center py-4">No hay ofertas para mostrar</td>
             </tr>`;
         return;
     }
     
-    filteredUsers.forEach((user, i) => {
-        const userIndex = users.findIndex(u => u.id === user.id);
+    filteredOffers.forEach((offer, i) => {
+        const offerIndex = offers.findIndex(o => o.id === offer.id);
         tbody.innerHTML += `
             <tr>
                 <td><input type="checkbox"></td>
-                <td>${user.id}</td>
-                <td>${user.name || ''}</td>
-                <td>${user.email || ''}</td>
-                <td>${user.tipo}</td>
-                <td><span class="status-badge ${user.estado === 'Activo' ? 'status-activo' : 'status-inactivo'}">${user.estado}</span></td>
-                <td>${user.fecha}</td>
+                <td>${offer.id}</td>
+                <td>${offer.title || ''}</td>
+                <td>${offer.employer || ''}</td>
+                <td>${offer.category || ''}</td>
+                <td><span class="status-badge ${getStatusClass(offer.status)}">${offer.status}</span></td>
+                <td>${offer.applications || 0}</td>
+                <td>${offer.fecha}</td>
                 <td>
                     <div class="dropdown action-dropdown">
                         <button class="btn btn-light border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">⋮</button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye me-2"></i> Ver perfil</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="openRegisterModal(${userIndex})"><i class="bi bi-pencil me-2"></i> Editar</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye me-2"></i> Ver detalles</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="openRegisterModal(${offerIndex})"><i class="bi bi-pencil me-2"></i> Editar</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="#" onclick="confirmDelete(${userIndex})"><i class="bi bi-trash me-2"></i> Eliminar</a></li>
+                            <li><a class="dropdown-item text-danger" href="#" onclick="confirmDelete(${offerIndex})"><i class="bi bi-trash me-2"></i> Eliminar</a></li>
                         </ul>
                     </div>
                 </td>
@@ -245,49 +261,66 @@ function updateTableView() {
     });
 }
 
+function getStatusClass(status) {
+    switch(status) {
+        case 'Activa':
+            return 'status-activa';
+        case 'Pausada':
+            return 'status-pausada';
+        case 'Cerrada':
+            return 'status-cerrada';
+        default:
+            return '';
+    }
+}
+
 function updateCardView() {
-    const cardContainer = document.getElementById('userCardContainer');
+    const cardContainer = document.getElementById('offerCardContainer');
     cardContainer.innerHTML = '';
     
-    if (filteredUsers.length === 0) {
+    if (filteredOffers.length === 0) {
         cardContainer.innerHTML = `
             <div class="alert alert-info text-center">
-                No hay usuarios para mostrar
+                No hay ofertas para mostrar
             </div>`;
         return;
     }
     
-    filteredUsers.forEach((user, i) => {
-        const userIndex = users.findIndex(u => u.id === user.id);
+    filteredOffers.forEach((offer, i) => {
+        const offerIndex = offers.findIndex(o => o.id === offer.id);
         cardContainer.innerHTML += `
-            <div class="user-card">
-                <div class="user-card-header">
-                    <h6 class="mb-0">${user.name || 'Sin nombre'}</h6>
-                    <span class="status-badge ${user.estado === 'Activo' ? 'status-activo' : 'status-inactivo'}">${user.estado}</span>
+            <div class="offer-card">
+                <div class="offer-card-header">
+                    <h6 class="mb-0">${offer.title || 'Sin título'}</h6>
+                    <span class="status-badge ${getStatusClass(offer.status)}">${offer.status}</span>
                 </div>
-                <div class="user-card-body">
-                    <div class="user-card-item">
-                        <span class="user-card-label">ID:</span>
-                        <span>${user.id}</span>
+                <div class="offer-card-body">
+                    <div class="offer-card-item">
+                        <span class="offer-card-label">ID:</span>
+                        <span>${offer.id}</span>
                     </div>
-                    <div class="user-card-item">
-                        <span class="user-card-label">Email:</span>
-                        <span>${user.email || ''}</span>
+                    <div class="offer-card-item">
+                        <span class="offer-card-label">Empleador:</span>
+                        <span>${offer.employer || ''}</span>
                     </div>
-                    <div class="user-card-item">
-                        <span class="user-card-label">Tipo:</span>
-                        <span>${user.tipo}</span>
+                    <div class="offer-card-item">
+                        <span class="offer-card-label">Categoría:</span>
+                        <span>${offer.category || ''}</span>
                     </div>
-                    <div class="user-card-item">
-                        <span class="user-card-label">Fecha:</span>
-                        <span>${user.fecha}</span>
+                    <div class="offer-card-item">
+                        <span class="offer-card-label">Aplicaciones:</span>
+                        <span>${offer.applications || 0}</span>
+                    </div>
+                    <div class="offer-card-item">
+                        <span class="offer-card-label">Fecha:</span>
+                        <span>${offer.fecha}</span>
                     </div>
                 </div>
-                <div class="user-card-footer">
-                    <button class="btn btn-sm btn-outline-primary" onclick="openRegisterModal(${userIndex})">
+                <div class="offer-card-footer">
+                    <button class="btn btn-sm btn-outline-primary" onclick="openRegisterModal(${offerIndex})">
                         <i class="bi bi-pencil"></i> Editar
                     </button>
-                    <button class="btn btn-sm btn-outline-danger" onclick="confirmDelete(${userIndex})">
+                    <button class="btn btn-sm btn-outline-danger" onclick="confirmDelete(${offerIndex})">
                         <i class="bi bi-trash"></i> Eliminar
                     </button>
                 </div>
@@ -295,17 +328,17 @@ function updateCardView() {
     });
 }
 
-// Búsqueda en tiempo real
-function searchUsers(term) {
+// Búsqueda
+function searchOffers(term) {
     if (!term.trim()) {
-        filteredUsers = [...users];
+        filteredOffers = [...offers];
     } else {
         term = term.toLowerCase();
-        filteredUsers = users.filter(user => 
-            (user.id.toString().includes(term)) ||
-            (user.name && user.name.toLowerCase().includes(term)) ||
-            (user.email && user.email.toLowerCase().includes(term)) ||
-            (user.tipo && user.tipo.toLowerCase().includes(term))
+        filteredOffers = offers.filter(offer => 
+            (offer.id.toString().includes(term)) ||
+            (offer.title && offer.title.toLowerCase().includes(term)) ||
+            (offer.employer && offer.employer.toLowerCase().includes(term)) ||
+            (offer.category && offer.category.toLowerCase().includes(term))
         );
     }
     updateView();
@@ -318,14 +351,14 @@ function toggleFilterPanel() {
 }
 
 function resetFilters() {
-    document.getElementById('filterTipo').value = '';
+    document.getElementById('filterCategoria').value = '';
     document.getElementById('filterEstado').value = '';
     document.getElementById('filterDateFrom').value = '';
     document.getElementById('filterDateTo').value = '';
 }
 
 function applyFilters() {
-    const tipo = document.getElementById('filterTipo').value;
+    const categoria = document.getElementById('filterCategoria').value;
     const estado = document.getElementById('filterEstado').value;
     const dateFrom = document.getElementById('filterDateFrom').value;
     const dateTo = document.getElementById('filterDateTo').value;
@@ -334,20 +367,20 @@ function applyFilters() {
     const fromDate = dateFrom ? new Date(dateFrom) : null;
     const toDate = dateTo ? new Date(dateTo) : null;
     
-    filteredUsers = users.filter(user => {
-        // Filtrar por tipo
-        if (tipo && user.tipo !== tipo) return false;
+    filteredOffers = offers.filter(offer => {
+        // Filtrar por categoría
+        if (categoria && offer.category !== categoria) return false;
         
         // Filtrar por estado
-        if (estado && user.estado !== estado) return false;
+        if (estado && offer.status !== estado) return false;
         
         // Filtrar por fecha
         if (fromDate || toDate) {
-            const parts = user.fecha.split('/');
-            const userDate = new Date(parts[2], parts[1] - 1, parts[0]);
+            const parts = offer.fecha.split('/');
+            const offerDate = new Date(parts[2], parts[1] - 1, parts[0]);
             
-            if (fromDate && userDate < fromDate) return false;
-            if (toDate && userDate > toDate) return false;
+            if (fromDate && offerDate < fromDate) return false;
+            if (toDate && offerDate > toDate) return false;
         }
         
         return true;
@@ -358,7 +391,7 @@ function applyFilters() {
 }
 
 function toggleAll(source) {
-    const checkboxes = document.querySelectorAll('#userTableBody input[type="checkbox"]');
+    const checkboxes = document.querySelectorAll('#offerTableBody input[type="checkbox"]');
     checkboxes.forEach(cb => cb.checked = source.checked);
 }
 
