@@ -20,7 +20,7 @@ body:has(dialog[open]) {
 }
 
 dialog {
-  width: 450px;
+  width: 400px;
   border: none;
   background-color: #ffffff;
   box-shadow: 3px 3px 10px rgb(134, 134, 134);

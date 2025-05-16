@@ -1,4 +1,10 @@
-const elementoExistente = document.querySelector('splide__slide')
-const elementoNoExiste = document.querySelector('modalLogin')
+function changeModal() {
+    const modalLogin = document.getElementById("modalLogin");
+    const modalSignup = document.getElementById("modalSignUp");
 
-console.log(elementoExistente, elementoNoExiste)
+    if (modalLogin.open) {
+        console.log("tabierto");
+        modalLogin.close();
+        modalSignup.showModal();
+    }
+}
