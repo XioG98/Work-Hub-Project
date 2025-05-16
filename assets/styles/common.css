@@ -75,9 +75,15 @@
     #013b48 -0.5%,
     #58cce6 52.44%,
     #ffaa5f 105.14%
-  );
-}
-
+  )}
+.bk-gr-triangle-blank {
+  background-image:url(/assets/img/backgrounds/headingBackg.svg),linear-gradient(180deg,rgba(255,170,95,0.05) 5.18%,rgba(34,113,131,0.19) 69.94%);
+  background-size:cover;
+  background-position:center;}
+.bk-gr-triangle-blue{
+  background-image:url(/assets/img/backgrounds/headingBackg.svg),linear-gradient(279deg,#58cce6 0%,#013b48 100%);
+  background-size:cover;
+  background-position:center;}
 /* Clases de color */
 .cl-blankest { color: var(--blankest) }
 .cl-heaven-blank { color: var(--heaven-blank) }
@@ -128,7 +134,11 @@ p {
   font-weight: 400;
   line-height: 24px;
 }
-
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* o un color fijo como #333 */
+}
 /* Espaciados */
 /* Gap responsive */
 .gap-1 { gap: clamp(0.25rem, 0.5vw, 0.5rem); }
