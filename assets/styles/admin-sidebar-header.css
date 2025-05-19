@@ -1,22 +1,3 @@
-/*body,
-html {
-  margin: 0;
-  height: 100vh;
-}
-.main-layout {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-main {
-  display: flex;
-  flex-wrap: nowrap;
-  height: 100vh;
-  height: -webkit-fill-available;
-  max-height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
-} 
 
 /* Header */
 header {
