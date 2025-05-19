@@ -21,7 +21,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const path = getPath();
   includeHTML("#header", `${path}header.html`);
   includeHTML("#footer", `${path}footer.html`);
-  includeHTML("#sidebar", `${path}sidebar.html`);
+  includeHTML("#admin-header", `${path}admin-header.html`);
+  includeHTML("#admin-sidebar", `${path}admin-sidebar.html`);
   includeHTML("#modal-login", `${path}modal-login.html`);
   includeHTML("#modal-signup", `${path}modal-signup.html`);
 }); 
