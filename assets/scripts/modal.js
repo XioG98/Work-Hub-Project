@@ -3,8 +3,19 @@ function changeModal() {
     const modalSignup = document.getElementById("modalSignUp");
 
     if (modalLogin.open) {
-        console.log("tabierto");
         modalLogin.close();
         modalSignup.showModal();
     }
+}
+
+function closeModalLogin(event){
+    event.preventDefault()
+    const modalLogin = document.getElementById('modalLogin')
+    modalLogin.close()
+}
+
+function closeModalSignUp(event){
+    event.preventDefault()
+    const modalSignUp = document.getElementById('modalSignUp')
+    modalSignUp.close()
 }

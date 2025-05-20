@@ -1,7 +1,7 @@
 <dialog id="modalLogin" closedby="any">
   <form class="form">
 
-      <button onclick="document.getElementById('modalLogin').close()" class="close">✖</button>
+      <button onclick="closeModal(event)" class="close">✖</button>
 
     <div class="flex-column">
       <label for="email">Email</label>
@@ -45,7 +45,8 @@
       <a class="text-decoration-none" href="#"><span class="span">Olvidaste tu contraseña?</span></a>
     </div>
 
-    <button id="btn-log-in" class="button-submit">Iniciar Sesión</button>
+    <button onclick="validateLogin()" id="btn-log-in" class="button-submit">Iniciar Sesión</button>
+
     <p class="p">No tienes una cuenta? <a onclick="changeModal()" id="change-modal" class="text-decoration-none"><span class="span">Registrate</span></a></p>
     <div class="flex-row">
       <button class="btn-login">
