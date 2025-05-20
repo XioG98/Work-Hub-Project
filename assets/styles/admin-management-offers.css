@@ -3,7 +3,7 @@ body {
     overflow: hidden;
 }
 
-main {
+.b-m {
     background-image: url(../img/backgrounds/bk-sect.svg);
     background-repeat: no-repeat;
     background-size: cover;
