@@ -1,7 +1,7 @@
 <dialog id="modalSignUp" closedby="any">
   <form class="form">
 
-      <button onclick="document.getElementById('modalSignUp').close()" class="close">✖</button>
+      <button onclick="closeModalSignUp(event)" class="close">✖</button>
 
     <div class="flex-column">
       <label for="email-sign-up">Email </label>
@@ -37,7 +37,7 @@
       </svg>
     </div>
 
-    <button id="btn-sign-up" class="button-submit">Registrarse
+    <button onclick="signUp()" id="btn-sign-up" class="button-submit">Registrarse
     </button>
     <p class="p m-0">O registrate con</p>
     

@@ -1,15 +1,4 @@
 
-
-function openAdmin() {
-  const email = document.getElementById("email");
-  const password = document.getElementById("password");
-  if (email.value == 'admin@gmail.com' && password.value == '123') {
-    window.location = 'admin.html'
-      ;
-  }
-  console.log("no")
-}
-
 /* Carrusel jobs*/
 document.addEventListener('DOMContentLoaded', function () {
   new Splide('#thumbnail-carousel', {

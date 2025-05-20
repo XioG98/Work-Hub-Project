@@ -31,7 +31,6 @@ header {
 /*Side Menu */
 .side-menu, .offcanvas-md{
   box-shadow: 4px 0 20px 0 rgba(0, 0, 0, 0.05);
-  height: 100vh;
   width: clamp(14rem, 20vw, 17rem);
 }
 aside .nav{
@@ -72,5 +71,8 @@ aside .nav{
 @media (max-width: 767.98px) {
   .offcanvas-md.offcanvas-start {
     width: clamp(15rem, 60vw, 18rem);
+  }
+  .imgHeader {
+    display: none;
   }
 }

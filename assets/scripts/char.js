@@ -71,7 +71,7 @@ new Chart(document.getElementById('userLoginChart'), {
         responsive: true,
         plugins: {
             legend: {
-                display: false
+                display: true
             },
             tooltip: {
                 enabled: true
@@ -126,10 +126,4 @@ new Chart(document.getElementById('offerApplicationsChart'), {
             }
         }
     }
-});
-
-window.addEventListener('resize', () => {
-  userLoginChart.resize();
-  offerApplicationsChart.resize();
-  doughnutOfferedChart.resize();
 });

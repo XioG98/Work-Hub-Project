@@ -1,4 +1,13 @@
 /* Estilos generales */
+main {
+    background-image: url(../img/backgrounds/bk-sect.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -10;
+    height: 100vh;
+}
+
 .table-responsive {
     overflow: visible;
 }
