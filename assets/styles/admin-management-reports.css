@@ -1,9 +1,5 @@
 .b-m {
-    background-image: url(../img/backgrounds/bk-sect.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: -10;
+    background: linear-gradient(to bottom, #e6e9ec 0%, #d7eaf4 100%);
     height: 100vh;
 }
 
