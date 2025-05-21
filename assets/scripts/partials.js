@@ -25,4 +25,6 @@ window.addEventListener("DOMContentLoaded", () => {
   includeHTML("#admin-sidebar", `${path}admin-sidebar.html`);
   includeHTML("#modal-login", `${path}modal-login.html`);
   includeHTML("#modal-signup", `${path}modal-signup.html`);
+  includeHTML("#user-header", `${path}user-header.html`);
+
 }); 
