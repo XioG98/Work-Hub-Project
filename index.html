@@ -21,15 +21,20 @@
     <!-- SEARCHING SECTION-->
     <section id="ldg-busqueda "
       class="ldg-busqueda bk-gr-triangle-blank fs d-flex flex-column align-items-center justify-content-center w-100 vh-100">
-      <h1 class=" text-center">Conectamos talento con oportunidades</h1>
-      <p class="text-center">WorkHub facilita el acceso a trabajos temporales en mantenimiento, limpieza y servicios
+      <h1 class=" text-center col-8 col-md-6">Conectamos talento con oportunidades</h1>
+      <p class="text-center col-10 col-md-7">WorkHub facilita el acceso a trabajos temporales en mantenimiento, limpieza y servicios
         auxiliares.</p>
+
       <div class="container-fluid">
-        <form class="mySearch d-flex m-auto gap-2" role="search">
-          <input class="form-control bk-blankest " type="search" placeholder="Buscar cargo o categoría"
+        <form class="mySearch d-flex m-auto gap-2 col-11 col-md-7" role="search">
+         <svg id="icon-brief" width="18" heigth="18" viewBox="0 0 16 16"><use href="./assets/svg/iconos.svg#icon-briefcase"> </use></svg>
+         <input class="form-control bk-blankest " type="text" name="search" placeholder="Buscar cargo o categoría"
             aria-label="Search">
-          <button class="btn btn-cta d-inline-flex gap-2 align-items-center" type="submit"><i class="bi bi-search"></i>
-            Search</button>
+          <button class="btn btn-cta d-inline-flex gap-2 align-items-center" type="submit"><span><svg width="16"
+                heigth="16" viewBox="0 0 16 16">
+                <use href="./assets/svg/iconos.svg#icon-search"> </use>
+              </svg> </span>
+            <span>Buscar</span></button>
         </form>
       </div>
       <div class="d-flex align-items-center justify-content-center gap-4 ">
@@ -209,7 +214,8 @@
       </div>
     </section>
     <!-- STORIES SECTION-->
-    <section id="ldg-pro" class="splide px-5 bk-gr-triangle-blue d-flex flex-column gap-4" aria-label="Splide Basic HTML Example">
+    <section id="ldg-pro" class="splide px-5 bk-gr-triangle-blue d-flex flex-column gap-4"
+      aria-label="Splide Basic HTML Example">
       <h2 class=" text-light d-flex flex-column align-items-center justify-content-center ">Historias de Éxito</h2>
       <div class="splide__track">
         <ul class="splide__list gap-4">

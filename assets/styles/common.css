@@ -76,6 +76,10 @@
     #58cce6 52.44%,
     #ffaa5f 105.14%
   )}
+  .bk-gr-blank {
+  background: linear-gradient(180deg,rgba(255,170,95,0.05) 5.18%,rgba(34,113,131,0.19) 69.94%);
+  background-size:cover;
+  background-position:center;}
 .bk-gr-triangle-blank {
   background-image:url(/assets/img/backgrounds/headingBackg.svg),linear-gradient(180deg,rgba(255,170,95,0.05) 5.18%,rgba(34,113,131,0.19) 69.94%);
   background-size:cover;
@@ -170,10 +174,11 @@ p {
   box-shadow: 0.5px 0.5px 1px 0 rgba(255, 255, 255, 0.6) inset,    1px 1px 3px 0 rgba(0, 0, 0, 0.25);
   color: var(--blankest);
   transition: all ease-in 200ms;
+  fill: var(--blankest);
 }
-.btn-cta:hover {
-  background: var(--orange);
-  color: var(--blankest);
+.btn-cta:hover, .btn-cta:focus, .btn-cta:active { 
+  background: var(--orange) !important; 
+  color: var(--blankest) !important;
 }
 .btn-cta-2 {
   background: var(--light-sky-blue);
@@ -181,9 +186,10 @@ p {
   color: var(--dark);
   transition: all ease-in 200ms;
 }
-.btn-cta-2:hover {
-  background: var(--negging-blue);
-  color: var(--blank-grey);
+.btn-cta-2:hover, .btn-cta-2:active {
+  background: var(--negging-blue) !important;
+  color: var(--blank-grey) !important;
+  border: none !important;
 }
 .btn-stroke {
   border: 1.5px solid var(--dark);
@@ -192,9 +198,9 @@ p {
     1px 1px 5px 0 rgba(0, 0, 0, 0.25);
     transition: all ease-in 200ms;
 }
-.btn-stroke:hover {
-  color: var(--blankest);
-  background: var(--dark);
+.btn-stroke:hover, .btn-stroke:active {
+  color: var(--blankest) !important;
+  background: var(--dark) !important;
 }
 .btn-stroke-2 {
   border: 1.5px solid var(--blankest);
@@ -202,9 +208,10 @@ p {
   background-color: transparent;
   transition: all ease-in 200ms;
 }
-.btn-stroke-2:hover {
-  color: var(--dark);
-  background: var(--light-blank);
+.btn-stroke-2:hover, .btn-stroke-2:active {
+  color: var(--dark) !important;
+  background: var(--light-blank) !important;
+  border: none !important;
 }
 .btn-dark {
   border-right: 0.8px solid var(--blankest);
@@ -215,7 +222,49 @@ p {
   color: var(--blankest);
   transition: all ease-in 200ms;
 }
-.btn-dark:hover {
-  color: var(--light-grey);
-  background: var(--dark-blue);
+.btn-dark:hover, .btn-dark:active {
+  color: var(--light-grey) !important;
+  background: var(--dark-blue) !important;
+    border: none !important;
+}
+
+/* Bloque input de búsqueda */
+
+.mySearch {
+  position: relative;
+}
+.mySearch input {
+  padding-left: 35px;
+
+}
+.mySearch .form-control, #filterBtn{
+  border-radius: 8px;
+  box-shadow: 2px 2px 3px 0 #00000040, 2px 2px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+
+.mySearch input.form-control::placeholder, #filterBtn {
+  color: var(--grey);
+  font-family: Afacad;
+  font-size: var(--fs-placeholder);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.mySearch .form-control:hover, #filterBtn:hover  {
+  border: 0.5px solid var(--grey);
+  background: var(--heaven-blank);
+  box-shadow: 2px 2px 3px 0 #00000040, 2px 2px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+
+.mySearch .form-control:focus, #filterBtn:active  {
+  border: 1px solid var(--mini-blue);
+  background: var(--light-blank);
+  box-shadow: 2px 2px 3px 0 #00000040, 2px 2px 2px 0 #f9fbff99 inset;
+}
+ #icon-brief {
+position: absolute;
+top: 11px;
+left: 12px;
+fill: var(--grey);
 }
