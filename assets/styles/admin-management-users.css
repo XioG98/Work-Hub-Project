@@ -1,3 +1,14 @@
+/* Desactivar el scroll para que no se vea feito */
+body {
+    overflow: hidden;
+}
+
+@media(max-width: 768px) {
+    body {
+        overflow: scroll;
+    }
+}
+
 /* Estilos generales */
 .b-m {
     background: linear-gradient(to bottom, #e6e9ec 0%, #d7eaf4 100%);
@@ -25,7 +36,8 @@
 }
 
 /* Centrado vertical en tablas */
-.table td, .table th {
+.table td,
+.table th {
     vertical-align: middle;
 }
 
@@ -64,18 +76,18 @@ body.modal-open {
         bottom: auto;
         width: auto;
     }
-    
+
     /* Limitar el número de toasts visibles en móvil */
     .toast-container .toast:nth-child(n+3) {
         display: none;
     }
-    
+
     /* Ajustar ancho de la barra de búsqueda en móvil */
     .input-group {
         width: 100%;
         max-width: none;
     }
-    
+
     #filterBtn {
         width: 100%;
     }
@@ -83,7 +95,7 @@ body.modal-open {
 
 /* Estilos para las tarjetas de usuario en móvil */
 .user-card {
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0, 0, 0, .125);
     border-radius: 0.25rem;
     margin-bottom: 1rem;
     background-color: #fff;
@@ -94,8 +106,8 @@ body.modal-open {
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 1rem;
-    border-bottom: 1px solid rgba(0,0,0,.125);
-    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    background-color: rgba(0, 0, 0, .03);
 }
 
 .user-card-body {
@@ -106,7 +118,7 @@ body.modal-open {
     display: flex;
     justify-content: space-between;
     padding: 0.75rem 1rem;
-    border-top: 1px solid rgba(0,0,0,.125);
+    border-top: 1px solid rgba(0, 0, 0, .125);
 }
 
 .user-card-item {
@@ -131,12 +143,14 @@ body.modal-open {
     text-align: center;
 }
 
-.status-activo, .status-activa {
+.status-activo,
+.status-activa {
     background-color: #28a745;
     color: white;
 }
 
-.status-inactivo, .status-pausada {
+.status-inactivo,
+.status-pausada {
     background-color: #6c757d;
     color: white;
 }

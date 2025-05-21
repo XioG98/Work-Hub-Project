@@ -140,7 +140,7 @@ function validateForm() {
             emailInput.classList.remove('is-invalid');
         }
     }
-    
+
     // En móvil, mostrar solo un toast con todos los errores
     if (errors.length > 0) {
         if (isMobile) {

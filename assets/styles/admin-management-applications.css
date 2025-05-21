@@ -1,15 +1,3 @@
-/* Desactivar el scroll para que no se vea feito */
-body {
-    overflow: hidden;
-}
-
-@media(max-width: 768px) {
-    body {
-        overflow: scroll;
-    }
-}
-
-/* Estilos generales optimizados */
 body {
     overflow: hidden;
 }
@@ -81,7 +69,7 @@ body.modal-open {
     }
 
     /* Limitar el número de toasts visibles en móvil */
-    .toast-container .toast:nth-child(n+3) {
+    .toast-container .toast:nth-child(n + 3) {
         display: none;
     }
 
@@ -96,39 +84,39 @@ body.modal-open {
     }
 }
 
-/* Estilos para las tarjetas - Renombradas de user-card a offer-card */
-.offer-card {
-    border: 1px solid rgba(0, 0, 0, .125);
+/* Estilos para las tarjetas de postulaciones */
+.application-card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
     margin-bottom: 1rem;
     background-color: #fff;
 }
 
-.offer-card-header {
+.application-card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, .125);
-    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
-.offer-card-body {
+.application-card-body {
     padding: 1rem;
 }
 
-.offer-card-footer {
+.application-card-footer {
     display: flex;
     justify-content: space-between;
     padding: 0.75rem 1rem;
-    border-top: 1px solid rgba(0, 0, 0, .125);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.offer-card-item {
+.application-card-item {
     margin-bottom: 0.5rem;
 }
 
-.offer-card-label {
+.application-card-label {
     font-weight: 600;
     margin-right: 0.5rem;
 }
@@ -138,6 +126,7 @@ body.modal-open {
     transition: all 0.3s ease;
 }
 
+/* Estilos para los badges de estado */
 .status-badge {
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
@@ -146,19 +135,110 @@ body.modal-open {
     text-align: center;
 }
 
-.status-activo,
-.status-activa {
+.status-pendiente {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.status-entrevista {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.status-aceptada {
     background-color: #28a745;
     color: white;
 }
 
-.status-inactivo,
-.status-pausada {
+.status-rechazada {
+    background-color: #dc3545;
+    color: white;
+}
+
+.status-finalizada {
     background-color: #6c757d;
     color: white;
 }
 
-.status-cerrada {
+/* Estilos para la imagen de perfil del candidato */
+.candidate-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.5rem;
+}
+
+/* Estilos para el modal de detalles */
+.detail-item {
+    margin-bottom: 1rem;
+}
+
+.detail-label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.detail-value {
+    color: #495057;
+}
+
+.detail-notes {
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    border-left: 3px solid #6c757d;
+}
+
+/* Estilos para la línea de tiempo */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin-top: 1.5rem;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #dee2e6;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    top: 0.25rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
     background-color: #6c757d;
-    color: white;
+}
+
+.timeline-item.active::before {
+    background-color: #28a745;
+}
+
+.timeline-date {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content {
+    color: #495057;
 }
