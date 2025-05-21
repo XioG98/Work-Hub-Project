@@ -19,6 +19,6 @@ Al darle al boton de iniciar sesión, deberá iniciar sesión con las siguientes
 
 ## Autores
 
-- [@Xiomara Garcia](https://www.github.com/octokatherine)
-- [@Christian Jaramillo](https://www.github.com/octokatherine)
-- [@Jaime Parra](https://www.github.com/octokatherine)
+- [@Xiomara Garcia](https://github.com/XioG98)
+- [@Christian Jaramillo](https://github.com/VivaCristioRey)
+- [@Jaime Parra](https://github.com/AndresAkm)
