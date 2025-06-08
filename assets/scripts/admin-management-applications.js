@@ -102,7 +102,7 @@ function loadAvailableJobs() {
         filterJobSelect.innerHTML += `<option value="${job.id}">${job.title}</option>`
     })
 
-    // Evento para autocompletar la empresa al seleccionar una oferta
+    // Evento para autocompletar el empleador al seleccionar una oferta
     jobSelect.addEventListener("change", function () {
         const selectedOption = this.options[this.selectedIndex]
         if (selectedOption.value) {
@@ -174,10 +174,10 @@ function validateForm() {
         candidateInput.classList.remove("is-invalid")
     }
 
-    // Validar empresa
+    // Validar empleador
     if (!companyInput.value.trim()) {
         companyInput.classList.add("is-invalid")
-        errors.push("La empresa no puede estar vacía")
+        errors.push("El empleador no puede estar vacía")
         isValid = false
     } else {
         companyInput.classList.remove("is-invalid")
@@ -344,7 +344,7 @@ function updateCardView() {
                         <span>${application.candidate || ""}</span>
                     </div>
                     <div class="application-card-item">
-                        <span class="application-card-label">Empresa:</span>
+                        <span class="application-card-label">Empleador:</span>
                         <span>${application.company || ""}</span>
                     </div>
                     <div class="application-card-item">
@@ -407,7 +407,7 @@ function viewApplicationDetails(index) {
             </div>
             <div class="col-md-6">
                 <div class="detail-item">
-                    <span class="detail-label">Empresa</span>
+                    <span class="detail-label">Empleador</span>
                     <span class="detail-value">${application.company}</span>
                 </div>
             </div>

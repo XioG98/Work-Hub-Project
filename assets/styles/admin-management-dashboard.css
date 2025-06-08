@@ -2,15 +2,6 @@ body {
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    opacity: 0;
-    animation: fadeInPage 0.2s ease-out forwards;
-
-}
-
-@keyframes fadeInPage {
-  to {
-    opacity: 1;
-  }
 }
 
 body>.d-flex.flex-column {

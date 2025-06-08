@@ -1,16 +1,13 @@
 <body>
-
-
-
     <header class="align-content-center">
         <nav class="navbar navbar-expand-md  navbar-dark " id="myNav">
             <div class="container-fluid px-0 ">
-
-                <a class="navbar-brand m-0 me-auto" href="/index.html"> <img class="imgHeader d-none d-md-inline"
-                        src="../assets/img/logo/logotipoWK.svg" alt="logotipo Work Hub">
-                    <img class="logoW d-md-none" src="../assets/img/logo/logoWK.svg" alt="logotipo Work Hub"></a>
+                <a class="navbar-brand m-0" href="/index.html">
+                    <img class="imgHeader d-none d-md-inline" src="../assets/img/logo/logotipoWK.svg"
+                        alt="logotipo Work Hub">
+                </a>
                 <!-- Barra de busqueda-->
-                <div class="col-8 col-md-8 d-flex justify-content-center align-items-center ">
+                <!-- <div class="col-8 col-md-8 d-flex justify-content-center align-items-center ">
                     <button id="filterBtn" class="btn " type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                         <span class="d-none d-md-inline">Filtrar</span>
@@ -35,24 +32,25 @@
                                 </svg> </span>
                         </button>
                     </form>
-                </div>
+                </div> -->
                 <!-- User options-->
-                <div class="ms-auto">
-                    <span class="p-1 d-none d-lg-inline"> User Name</span>
-                    <img src="https://github.com/XioG98.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <div class="d-flex flex-row">
+                    <div class="ms-auto">
+                        <span class="p-1 d-none d-lg-inline">User Name</span>
+                        <img src="../assets/img/profile-img/profile-picture.png" alt="user-picture" width="32"
+                            height="32" class="rounded-circle me-2">
+                    </div>
 
+                    <div class="dropdown">
+                        <span class="link-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"></span>
+                        <ul class="dropdown-menu-end dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Hoja de vida</a> </li>
+                            <li><a class="dropdown-item" href="#">Mis aplicaciones</a> </li>
+                            <li><a class="last-dropdown-item dropdown-item" href="/index.html">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="dropdown">
-                    <span class="link-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"></span>
-                    <ul class="dropdown-menu-end dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Ver perfil</a></li>
-                        <li><a class="dropdown-item" href="#">Hoja de vida</a> </li>
-                        <li><a class="dropdown-item" href="#">Mis aplicaciones</a> </li>
-                        <li><a class="last-dropdown-item dropdown-item" href="/index.html">Cerrar sesión</a></li>
-                    </ul>
-                </div>
-
             </div>
         </nav>
     </header>
